@@ -107,8 +107,8 @@ const DetailMovies = () => {
             >
                 <Col span={24}>
                     <h4> Chi  tiet bo phim </h4>
-                    <Row>
-                        <Col span={8}>
+                    <Row style={{display: 'flex', justifyContent:'space-between'}}>
+                        <Col span={5}>
                             <div style={{ padding: '10px' }}>
                                 <Image src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
                                 <p style={{ fontWeight: 700 }}>{movie.original_title}</p>
@@ -133,36 +133,12 @@ const DetailMovies = () => {
                                 }
                             </div>
                         </Col>
-                        <Col span={16}>
-                            <div style={{ padding: '10px' }}>
+                        <Col span={10} s>
+                            <div style={{ padding: '10px', textAlign:'center' }}>
                                 <h3>{movie.title}</h3>
                                 <p>{movie.overview}</p>
-                                {/*
-                                <div style={{ 
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    justifyContent: 'space-around'
-                                }}>
+            
                                 {
-                                    movie['videos']['results'].map((item,index) => (
-                                        <p key={index}>
-                                            <ModalVideo
-                                                channel='youtube'
-                                                autoplay
-                                                isOpen={isOpen}
-                                                videoId={item.key}
-                                                onClose={() => setOpen(false)}
-                                            />
-                                            <Button
-                                                type="primary"
-                                                onClick={()=> setOpen(true)}
-                                            >Trailer {index + 1}</Button>
-                                        </p>
-                                    ))
-                                }
-                                </div>
-                                */}
-                                {/* {
                                     movie['videos']['results'].map((item,index) => (
                                         <div key={index} style={{ marginBottom: '5px' }}>
                                             <YouTube
@@ -172,10 +148,10 @@ const DetailMovies = () => {
                                             />
                                         </div>
                                     ))
-                                } */}
+                                }
                             </div>
                         </Col>
-                        {/* <Col span={8} style={{ padding: '10px' }}>
+                        <Col span={5} style={{ padding: '10px' }}>
                             <h5> Images movie</h5>
                             {
                                 movie['images']['backdrops'].map((item,index) => (
@@ -184,7 +160,7 @@ const DetailMovies = () => {
                                     </div>
                                 ) )
                             }
-                        </Col> */}
+                        </Col>
                     </Row>
                 </Col>
             </Row>

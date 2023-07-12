@@ -11,7 +11,7 @@ const FooterMovies = () => {
                 textAlign: 'center',
             }}
         >
-            ReactJS2302 ©2023 Movies App
+            Create By HaVietDung ©2023 Movies App
         </Footer>
     )
 }
